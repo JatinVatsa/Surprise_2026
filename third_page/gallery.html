@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffe1e1" />
+  <meta name="description" content="Six little photo memories, just for you." />
+  <title>Our Little Memories</title>
+  <script src="../refresh-redirect.js"></script>
+  <link rel="stylesheet" href="./gallery.css" />
+</head>
+<body>
+  <main class="gallery-page">
+    <a class="back-link" href="./index.html">← Back to your birthday wishes</a>
+    <audio id="background-song" src="./hawayein.mp3" loop preload="metadata" aria-hidden="true" hidden></audio>
+    <p class="music-status" id="music-status" role="status" aria-live="polite"></p>
+    <header class="gallery-heading">
+      <p class="eyebrow"><span aria-hidden="true">✦</span> A little walk down memory lane <span aria-hidden="true">✦</span></p>
+      <h1> Little <span>Memories</span></h1>
+      <p class="gallery-intro">Some snapshots to make you smile, Aashrita 💗</p>
+      <span class="heading-sparkle sparkle-one" aria-hidden="true">✧</span>
+      <span class="heading-sparkle sparkle-two" aria-hidden="true">♡</span>
+    </header>
+
+    <section class="photo-grid" aria-label="Photo memories">
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a2.jpg" width="960" height="1280" alt="Photo memory one" loading="eager" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a2.jpg" width="960" height="1280" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>A little moment to keep close ✨</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a3.jpg" width="720" height="1280" alt="Photo memory two" loading="lazy" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a3.jpg" width="720" height="1280" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>One for the memory book 💗</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a4.jpg" width="640" height="976" alt="Photo memory three" loading="lazy" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a4.jpg" width="640" height="976" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>A smile worth remembering 🌸</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a5.jpg" width="1200" height="1600" alt="Photo memory four" loading="lazy" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a5.jpg" width="1200" height="1600" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>Some moments stay special 💫</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a6.jpg" width="1280" height="960" alt="Photo memory five" loading="lazy" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a6.jpg" width="1280" height="960" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>Another lovely little memory 🌷</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-visual">
+          <img src="./images/a7.jpg" width="1220" height="1086" alt="Photo memory six" loading="lazy" decoding="async" />
+          <div class="photo-reflection" aria-hidden="true"><img src="./images/a7.jpg" width="1220" height="1086" alt="" loading="lazy" decoding="async" /></div>
+        </div>
+        <figcaption>Always worth a second look 💕</figcaption>
+      </figure>
+    </section>
+
+    <footer class="gallery-footer">
+      <button class="close-button" id="close-gallery" type="button">
+        Close surprise <span aria-hidden="true">×</span>
+      </button>
+    </footer>
+  </main>
+  <script src="./music-continuity.js"></script>
+  <script src="./gallery-entrance.js"></script>
+  <script>
+    document.getElementById("close-gallery").addEventListener("click", () => {
+      window.location.href = "http://127.0.0.1:1";
+    });
+  </script>
+</body>
+</html>

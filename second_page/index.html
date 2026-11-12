@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A special birthday surprise." />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <audio id="page-song" src="./_Jashn_E_Bahara_Instrumental_Song_Ringtone_(by Fringster.com).mp3" loop preload="metadata"></audio>
+  <a class="back-link" href="../index.html">← Back</a>
+  <main id="Content">
+    <div id="kadoIn" role="button" tabindex="0" aria-label="Open your gift">
+      <img src="./Surprise.png" alt="Open Gift" />
+    </div>
+    <p id="ket">
+      <span style="font-style: italic; color: rgb(0, 0, 0); margin-top: 3px !important;">Open the Gift, Gorgeous</span>
+    </p>
+  </main>
+
+  <script src="./page-song.js"></script>
+  <script>
+    const gift = document.getElementById("kadoIn");
+    const openGift = () => {
+      window.location.href = "./letters.html";
+    };
+
+    gift.addEventListener("click", openGift);
+    gift.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openGift();
+      }
+    });
+  </script>
+</body>
+</html>

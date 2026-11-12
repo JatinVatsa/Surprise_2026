@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #ffe1e1, #ff217de0), url("./r.jpg") center / cover fixed;
+  font-family: Arial, sans-serif;
+}
+
+.back-link {
+  position: fixed;
+  top: 28px;
+  left: 20px;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: #62283f;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
+#Content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16vh 16px 24px;
+  text-align: center;
+}
+
+#kadoIn {
+  cursor: pointer;
+}
+
+#kadoIn:focus-visible {
+  border-radius: 12px;
+  outline: 3px solid #7c183d;
+  outline-offset: 6px;
+}
+
+#kadoIn img {
+  display: block;
+  width: min(317px, 80vw);
+  height: auto;
+  margin-bottom: 26px;
+  transition: transform 0.3s ease;
+}
+
+#kadoIn img:hover {
+  transform: scale(0.9);
+}
+
+#ket {
+  margin: 0;
+  color: #240606;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgb(10 3 3 / 67%);
+}
+
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .back-link {
+    top: 20px;
+    left: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #kadoIn img {
+    transition: none;
+  }
+}

@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  place-items: center;
+  background: linear-gradient(to bottom, #ffe1e1, #ff217de0), url("../second_page/r.jpg") center / cover fixed;
+  color: #3a1724;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.surprise-card {
+  width: min(100%, 620px);
+  padding: clamp(28px, 7vw, 56px);
+  border: 1px solid rgb(255 255 255 / 82%);
+  border-radius: 28px 8px 28px 8px;
+  background: rgb(255 248 250 / 88%);
+  box-shadow: 0 16px 50px rgb(102 29 59 / 22%);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #793b58;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #7c183d;
+  font: 700 clamp(2.4rem, 8vw, 4rem) Georgia, serif;
+  line-height: 1.1;
+}
+
+h1 span {
+  display: block;
+  margin-top: 8px;
+  color: #b52e59;
+  font-size: 0.72em;
+}
+
+.birthday-note {
+  margin: 24px 0;
+}
+
+.music-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.message {
+  margin: 12px 0;
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.message-highlight {
+  margin: 0 0 16px;
+  color: #b52e59;
+  font: 700 clamp(1.45rem, 5vw, 2rem) Georgia, serif;
+}
+
+.back-link {
+  display: inline-block;
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: #b52e59;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-to-letters {
+  position: fixed;
+  top: 28px;
+  left: 20px;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: #62283f;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-to-letters:hover,
+.back-to-letters:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .back-to-letters {
+    top: 20px;
+    left: 14px;
+  }
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  background: #922144;
+  outline: 3px solid #d56b8b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  body {
+    background-attachment: scroll;
+  }
+}

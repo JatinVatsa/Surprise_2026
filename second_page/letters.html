@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A little letter-by-letter birthday surprise for Aashu." />
+  <title>A Little Something for You</title>
+  <script src="../refresh-redirect.js"></script>
+  <link rel="stylesheet" href="./letters.css" />
+</head>
+<body>
+  <audio id="page-song" src="./_Jashn_E_Bahara_Instrumental_Song_Ringtone_(by Fringster.com).mp3" loop preload="metadata"></audio>
+  <main class="letter-page">
+    <a class="back-link" href="./index.html">← Back</a>
+    <header class="page-heading">
+      <p class="eyebrow">A little surprise for you</p>
+      <h1>26 little reasons <span>you’re wonderful</span></h1>
+      <p class="instructions">Choose a letter, Aashu, and open a message made just for you 💌</p>
+      <p class="message-progress" id="message-progress" aria-live="polite">Opened 0 of 26 messages</p>
+    </header>
+
+    <section class="letter-grid" aria-label="Choose a letter">
+      <button class="letter-box" type="button" data-letter="A">A</button>
+      <button class="letter-box" type="button" data-letter="B">B</button>
+      <button class="letter-box" type="button" data-letter="C">C</button>
+      <button class="letter-box" type="button" data-letter="D">D</button>
+      <button class="letter-box" type="button" data-letter="E">E</button>
+      <button class="letter-box" type="button" data-letter="F">F</button>
+      <button class="letter-box" type="button" data-letter="G">G</button>
+      <button class="letter-box" type="button" data-letter="H">H</button>
+      <button class="letter-box" type="button" data-letter="I">I</button>
+      <button class="letter-box" type="button" data-letter="J">J</button>
+      <button class="letter-box" type="button" data-letter="K">K</button>
+      <button class="letter-box" type="button" data-letter="L">L</button>
+      <button class="letter-box" type="button" data-letter="M">M</button>
+      <button class="letter-box" type="button" data-letter="N">N</button>
+      <button class="letter-box" type="button" data-letter="O">O</button>
+      <button class="letter-box" type="button" data-letter="P">P</button>
+      <button class="letter-box" type="button" data-letter="Q">Q</button>
+      <button class="letter-box" type="button" data-letter="R">R</button>
+      <button class="letter-box" type="button" data-letter="S">S</button>
+      <button class="letter-box" type="button" data-letter="T">T</button>
+      <button class="letter-box" type="button" data-letter="U">U</button>
+      <button class="letter-box" type="button" data-letter="V">V</button>
+      <button class="letter-box" type="button" data-letter="W">W</button>
+      <button class="letter-box" type="button" data-letter="X">X</button>
+      <button class="letter-box" type="button" data-letter="Y">Y</button>
+      <button class="letter-box" type="button" data-letter="Z">Z</button>
+    </section>
+
+    <dialog class="message-dialog" aria-labelledby="message-title">
+      <form method="dialog">
+        <button class="close-button" aria-label="Close message">×</button>
+      </form>
+      <p class="message-letter" id="message-letter"></p>
+      <h2 id="message-title"></h2>
+      <p class="message-copy" id="message-copy"></p>
+      <form method="dialog">
+        <button class="heart-button">Keep this one close 💗</button>
+      </form>
+    </dialog>
+
+    <dialog class="warning-dialog" id="reading-warning" aria-labelledby="warning-title">
+      <p class="warning-icon" aria-hidden="true">🎂✨</p>
+      <h2 id="warning-title">Oops! You can’t skip this birthday magic.</h2>
+      <p class="warning-copy" id="warning-copy"></p>
+      <form method="dialog">
+        <button class="warning-button">I’ll read them all 💌</button>
+      </form>
+    </dialog>
+
+    <a class="next-button" href="../third_page/index.html">
+      Next <span aria-hidden="true">♥</span>
+    </a>
+  </main>
+  <script src="./page-song.js"></script>
+  <script src="./letters.js"></script>
+</body>
+</html>
