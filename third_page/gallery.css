@@ -318,6 +318,11 @@ h1 span {
 }
 
 @media (hover: none) {
+  .photo-visual::before {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
   .photo-card:active {
     transform: scale(1.025);
   }

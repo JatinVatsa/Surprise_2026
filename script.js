@@ -1,18 +1,22 @@
 var birthdaySong = document.getElementById("birthday-song");
 
-if (birthdaySong) {
-  function startBirthdaySong() {
-    birthdaySong.play().then(function(){
-      document.removeEventListener("pointerdown", startBirthdaySong);
-      document.removeEventListener("keydown", startBirthdaySong);
-    }).catch(function(error){
-      if (error.name === "NotAllowedError") {
-        return;
-      }
-      console.error("Could not play the birthday song:", error);
-    });
+function startBirthdaySong() {
+  if (!birthdaySong || !birthdaySong.paused) {
+    return;
   }
 
+  birthdaySong.play().then(function(){
+    document.removeEventListener("pointerdown", startBirthdaySong);
+    document.removeEventListener("keydown", startBirthdaySong);
+  }).catch(function(error){
+    if (error.name === "NotAllowedError") {
+      return;
+    }
+    console.error("Could not play the birthday song:", error);
+  });
+}
+
+if (birthdaySong) {
   document.addEventListener("pointerdown", startBirthdaySong);
   document.addEventListener("keydown", startBirthdaySong);
   startBirthdaySong();
@@ -35,6 +39,7 @@ if (window.jQuery) {
         $("#present #top").removeClass("animated bounce");
     });
     $("#present").on("click", function(){
+      startBirthdaySong();
       $("#wrapper").addClass("letter-open");
       $("#welcome").fadeOut(500);
       $("#present #top").removeClass("animated bounce");

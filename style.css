@@ -391,6 +391,27 @@ box-shadow: 0px 13px 4px -10px rgba(0,0,0,0.3);
   border-top-right-radius: 10px;
   z-index: 2;
 }
+
+@keyframes lid-hint {
+  0%, 78%, 100% { transform: translateY(0) rotate(0deg); }
+  84% { transform: translateY(-10px) rotate(-3deg); }
+  90% { transform: translateY(-2px) rotate(1deg); }
+  96% { transform: translateY(0) rotate(0deg); }
+}
+
+@media (hover: none) {
+  #present #top:not(.animated) {
+    transform-origin: center bottom;
+    animation: lid-hint 3.6s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #present #top:not(.animated) {
+    animation: none;
+  }
+}
+
 #present #top img{
   position: absolute;
   top: -5px;
